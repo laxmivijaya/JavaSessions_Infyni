@@ -1,7 +1,7 @@
-package collectionsPkg;
+package collectionsPkg.list;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ArrayListExample {
@@ -50,19 +50,52 @@ public class ArrayListExample {
         }
 */
 
+
         List<Employee> employeeList1= Arrays.asList(new Employee(1,"vijay")
                 ,new Employee(2,"vijay1")
                 ,new Employee(3),new Employee(4,"vinay",
                         new Department(1,"CSE")));
 
-        for (Employee employee:employeeList1) {
+       /* for (Employee employee:employeeList1) {
             if(employee.getDepartment()!=null){
-
                 System.out.println(employee.getEmpId()+"  have any department.."+employee.getDepartment().getDepartmentName());
             }else{
                 System.out.println(employee.getEmpId()+" does not have any department..");
             }
-        }
+        }*/
+
+
+
+
+
+        Collections.sort(employeeList1);
+
+
+        System.out.println(employeeList1);
+
+
+
+/*
+
+
+
+
+
+
+
+
+
+        List<Integer> list=Arrays.asList(30,4,5);
+       */
+/* List<Integer> list1=Arrays.asList(8,90,0);
+        list.addAll(list1);*//*
+
+
+        Collections.sort(list);
+        Collections.sort(list,Collections.reverseOrder());
+
+        System.out.println(list);
+*/
 
     }
 }

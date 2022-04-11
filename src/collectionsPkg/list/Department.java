@@ -1,4 +1,4 @@
-package collectionsPkg;
+package collectionsPkg.list;
 
 public class Department {
 

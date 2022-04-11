@@ -1,9 +1,10 @@
-package collectionsPkg;
+package collectionsPkg.list;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
 
     private Integer empId;
     private String empName;
+
     private Department department;
 
     public Employee(Integer empId) {
@@ -43,5 +44,45 @@ public class Employee {
 
     public void setDepartment(Department department) {
         this.department = department;
+    }
+
+/*
+
+    @Override
+    public int compareTo(Employee emp) {
+
+        if(empId<emp.getEmpId()){
+            return -1;
+        }else if(empId>emp.getEmpId()){
+            return 1;
+        }
+
+        return 0;
+    }
+*/
+
+
+
+    @Override
+    public int compareTo(Employee emp) {
+
+       /* if(empId<emp.getEmpId()){
+            return 1;
+        }else if(empId>emp.getEmpId()){
+            return -1;
+        }
+
+        return 0;*/
+
+        return empId.compareTo(emp.getEmpId());
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", empName='" + empName + '\'' +
+                ", department=" + department +
+                '}';
     }
 }
